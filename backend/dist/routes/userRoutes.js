@@ -96,4 +96,18 @@ router.post("/signup", (req, res) => __awaiter(void 0, void 0, void 0, function*
         return res.status(500).json({ message: "Internal Server Error" });
     }
 }));
+router.get("/users", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    try {
+        const users = yield prisma.user.findMany();
+        // You can modify this to return only the necessary fields, like id, email, etc.
+        return res.status(200).json({
+            message: "Users fetched successfully",
+            users: users,
+        });
+    }
+    catch (error) {
+        console.error("Error fetching users:", error);
+        return res.status(500).json({ message: "Internal Server Error" });
+    }
+}));
 module.exports = router;

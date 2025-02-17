@@ -18,7 +18,7 @@ export const Signin = () => {
   const handleSignIn = async () => {
     setLoading(true); // Show loader while signing in
     try {
-      const response = await axios.post("http://localhost:3000/api/v1/user/signin", {
+      const response = await axios.post("https://art-gallery-liart-nine.vercel.app/api/v1/user/signin", {
         email: username,
         password,
       });

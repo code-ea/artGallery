@@ -77,7 +77,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
-const mainRouter = require("./src/routes/routesIndex");
+const mainRouter = require("./routes/index");
 
 dotenv.config();
 
