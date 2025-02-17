@@ -38,7 +38,7 @@ export const Signup = () => {
     setLoading(true);
     try {
       const response = await axios.post(
-        "http://localhost:3000/api/v1/user/signup",
+        "https://art-gallery-five-tan.vercel.app/api/v1/user/signup",
         {
           email,
           firstName,
