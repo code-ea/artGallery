@@ -3,6 +3,7 @@ import { UserDashboard } from "./pages/user/UserDashboard";
 import { AdminDashboard } from "./pages/admin/AdminDashboard"; 
 import { Signin } from "./pages/index/Signin";
 import { Signup } from "./pages/index/Signup";
+import { Me } from "./components/Me";
 import { Toaster } from "sonner";
 
 function DashboardRedirect() {
@@ -17,6 +18,7 @@ function App() {
       <Toaster />
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Me/>}/>
           <Route path="/signin" element={<Signin />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/dashboard" element={<DashboardRedirect />} />
